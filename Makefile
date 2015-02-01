@@ -1,2 +1,8 @@
-dumbsnake: dumbsnake.c
-	$(CC) -lcurses -lrt $(CFLAGS) $(LDFLAGS) dumbsnake.c -o dumbsnake
+LDFLAGS += -lcurses -lrt
+
+all: dumbsnake
+
+clean:
+	$(RM) dumbsnake
+
+.PHONY: all clean
